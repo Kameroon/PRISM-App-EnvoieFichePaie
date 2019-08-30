@@ -1,0 +1,53 @@
+﻿<Window x:Class="WpfAppSimpleDelegateCommand.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppSimpleDelegateCommand"
+        xmlns:command="clr-namespace:WpfAppSimpleDelegateCommand.Commands"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="35"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="35"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="1" Grid.Row="2" >
+            <Button Content="Parcourir" Height="27" FontWeight="Bold" Margin="5" 
+                Command="{Binding TestCmd}" HorizontalAlignment="Center" />
+
+            <Border Width="170" Height="35" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                Background="red" command:MouseLeftButtonDown.Command="{Binding TestCmd2}"
+                Margin="0,0,6,0" CornerRadius="8,8,8,8">
+                <TextBlock Width="150" Height="Auto" Foreground="White" FontWeight="Bold"
+                       FontSize="20" Text="Send by mail" TextAlignment="Center"
+                       Margin="0,0,0,3" VerticalAlignment="Center"/>
+            </Border>
+        </StackPanel>
+        
+        <!--<Button Grid.Column="1" Grid.Row="2" Content="Parcourir" Height="27" 
+                FontWeight="Bold" Margin="5" 
+                Command="{Binding TestCmd}" HorizontalAlignment="Center" />
+
+        <Border Grid.Column="1" Grid.Row="4" Width="170" Height="35"
+                HorizontalAlignment="Center" VerticalAlignment="Center" 
+                Background="red" command:MouseLeftButtonDown.Command="{Binding TestCmd2}"
+                Margin="0,0,6,0" CornerRadius="8,8,8,8">
+            <TextBlock Width="150" Height="Auto" Foreground="White" FontWeight="Bold"
+                       FontSize="20" Text="Send by mail" TextAlignment="Center"
+                       Margin="0,0,0,3" VerticalAlignment="Center"/>
+        </Border>-->
+    </Grid>
+    
+</Window>
