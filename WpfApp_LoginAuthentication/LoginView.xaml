@@ -1,0 +1,119 @@
+﻿<Grid x:Class="WpfApp_LoginAuthentication.LoginView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp_LoginAuthentication"
+             xmlns:converter="clr-namespace:WpfApp_LoginAuthentication.Converters"
+             mc:Ignorable="d" Background="White"
+             MinWidth="400" MinHeight="300">
+    
+     <!--d:DesignHeight="300" d:DesignWidth="400"-->
+    
+        <!--<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"
+                   HorizontalAlignment="Center" FontSize="35"
+                   Text="Formulaire de connection" FontFamily="Segoe UI Light"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="Identifiant : " VerticalAlignment="Center"/>
+        <TextBox Grid.Row="2" Grid.Column="2" MinWidth="200" MinHeight="32" VerticalContentAlignment="Center">
+            <Binding Path="FirstName" FallbackValue="Adresse mail" Mode="TwoWay" 
+                     UpdateSourceTrigger="PropertyChanged">
+                <Binding.ValidationRules>
+                    <converter:EmailValidationRule />
+                </Binding.ValidationRules>
+            </Binding>
+        </TextBox>-->
+
+        <!-- Passeword confirm
+            https://stackoverflow.com/questions/5960107/wpf-validation-confirmed-password 
+        -->
+        <!--<TextBlock Grid.Row="4" Grid.Column="1" Text="FirstName : " VerticalAlignment="Center"/>
+        <PasswordBox Grid.Row="4" Grid.Column="2" MinWidth="200" MinHeight="32" MaxLength="10" 
+                     local:PasswordHelper.Attach="True" 
+                 local:PasswordHelper.Password="{Binding LastName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" 
+                 Width="130"/>
+
+        <Button Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Content="Valider"
+                Width="150" Height="35" HorizontalAlignment="Right"
+                Command="{Binding ValidateCommand}"/>-->
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
+                   HorizontalAlignment="Center" FontSize="35"
+                   Text="Formulaire de connection" FontFamily="Segoe UI Light"/>
+
+    <Border Grid.Row="2" Grid.Column="1" BorderBrush="LightGray" CornerRadius="9" 
+                BorderThickness="3" Background="LightSalmon" Padding="9">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="2" Grid.Column="1" Text="Identifiant : " VerticalAlignment="Center"/>
+                <!--<TextBox Grid.Row="2" Grid.Column="2" MinWidth="200" MinHeight="32"
+                 Text="{Binding UserName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>-->
+
+                <TextBox Grid.Row="2" Grid.Column="2" MinWidth="200" MinHeight="32" VerticalContentAlignment="Center">
+                    <Binding Path="UserName" FallbackValue="Adresse mail" Mode="TwoWay" 
+                             UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <converter:EmailValidationRule />
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox>
+
+                <!-- Passeword confirm
+            https://stackoverflow.com/questions/5960107/wpf-validation-confirmed-password 
+        -->
+                <TextBlock Grid.Row="4" Grid.Column="1" Text="Password : " VerticalAlignment="Center"/>
+                <PasswordBox Grid.Row="4" Grid.Column="2" MinWidth="200" MinHeight="32" MaxLength="10" 
+                         local:PasswordHelper.Attach="True" Width="130"
+                         local:PasswordHelper.Password="{Binding Password, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+
+                <Button Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Content="Valider"
+                Width="150" Height="35" HorizontalAlignment="Right"
+                Command="{Binding LogInCommand}"/>
+            </Grid>
+        </Border>
+</Grid>

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppDepndencyInjectionUni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTemplates", "DataTemplates\DataTemplates.csproj", "{A6ED8171-D89C-4964-BAF1-B9F617FAE6D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp_LoginAuthentication", "WpfApp_LoginAuthentication\WpfApp_LoginAuthentication.csproj", "{8A01CA30-91FF-45B9-BA7B-CF97079B6DA5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{A6ED8171-D89C-4964-BAF1-B9F617FAE6D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6ED8171-D89C-4964-BAF1-B9F617FAE6D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6ED8171-D89C-4964-BAF1-B9F617FAE6D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A01CA30-91FF-45B9-BA7B-CF97079B6DA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A01CA30-91FF-45B9-BA7B-CF97079B6DA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A01CA30-91FF-45B9-BA7B-CF97079B6DA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A01CA30-91FF-45B9-BA7B-CF97079B6DA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
